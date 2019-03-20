@@ -20,6 +20,17 @@ The basic `modd` configuration provided in this projects takes care of the follo
  - process `scss` files whenever they changes
  - run `devd` and trigger a live-reload of the connected browsers whenever some of the source files is changed (the live-reload is actually triggered by changes into the `target` folder, that is caused by the processing of some files in the `src` folder).
 
+To build the project and start the `devd` web server providing access to the application, just invoke the `modd` command from the project root folder:
+
+    $ cd spago-modd
+    $ modd
+    [...]
+    >> starting...
+    Route / -> reads files from ./target
+    Listening on http://devd.io:8000 (127.0.0.1:8000)
+
+That's all you have to do.
+
 The current solution still lacks an option to do the final packaging of all the resources when ready to release a new version of the app, but I'll think to this once I have written some actual Purescript code worth sharing. :)
 
 
